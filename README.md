@@ -2,6 +2,10 @@
 
 [Bootcards](http://bootcards.org/) components built with [React](http://facebook.github.io/react/)
 
+[![NPM version](https://badge.fury.io/js/react-bootcards.svg)](https://badge.fury.io/js/react-bootcards)
+[![Dependency Status](https://david-dm.org/kobanyan/react-bootcards.svg)](https://david-dm.org/kobanyan/react-bootcards)
+[![devDependency Status](https://david-dm.org/kobanyan/react-bootcards/dev-status.svg)](https://david-dm.org/kobanyan/react-bootcards#info=devDependencies)
+[![peerDependency Status](https://david-dm.org/kobanyan/react-bootcards/peer-status.svg)](https://david-dm.org/kobanyan/react-bootcards#info=peerDependencies)
 
 ## Demo & Examples
 
