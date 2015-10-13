@@ -1,7 +1,8 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import createBrowserHistory from 'history/lib/createBrowserHistory';
 import {Router, Route, IndexRoute, Link} from 'react-router';
-import {Navbar, Nav, NavItem} from 'react-bootstrap';
+import {Navbar, NavBrand, Nav, NavItem} from 'react-bootstrap';
 import {LinkContainer} from 'react-router-bootstrap';
 import {Container} from 'react-bootcards';
 
@@ -13,10 +14,10 @@ const App = React.createClass({
   render () {
     return (
       <div>
-        <Navbar inverse fixedTop
-          brand={<Link to="/react-bootcards" title="Bootcards">Bootcards</Link>}
-          toggleNavKey={0}
-        >
+        <Navbar inverse fixedTop toggleNavKey={0}>
+          <NavBrand>
+            <Link to="/react-bootcards" title="Bootcards">Bootcards</Link>
+          </NavBrand>
           <Nav eventKey={0}>
             <NavItem eventKey={1}>
               <LinkContainer to="/react-bootcards">
@@ -43,7 +44,7 @@ const App = React.createClass({
   }
 });
 
-React.render((
+ReactDOM.render((
   <Router history={createBrowserHistory()}>
     <Route path="/" component={App}>
       <IndexRoute component={Home} />
@@ -52,4 +53,4 @@ React.render((
       <Route path="*" component={Home}/>
     </Route>
   </Router>
-), document.body);
+), document.getElementById('root'));

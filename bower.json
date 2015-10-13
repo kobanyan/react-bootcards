@@ -1,11 +1,11 @@
 {
   "name": "react-bootcards",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "react-bootcards",
   "main": "dist/react-bootcards.min.js",
-  "homepage": "https://github.com//react-bootcards",
+  "homepage": "https://github.com/kobanyan/react-bootcards",
   "authors": [
-    ""
+    "kobanyan"
   ],
   "moduleType": [
     "amd",
@@ -14,7 +14,9 @@
   ],
   "keywords": [
     "react",
-    "react-component"
+    "react-component",
+    "bootstrap",
+    "bootcards"
   ],
   "license": "MIT",
   "ignore": [

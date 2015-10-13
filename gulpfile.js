@@ -19,11 +19,11 @@ var taskConfig = {
       'classnames',
       'history',
       'react',
-      'react/addons',
+      'react-dom',
       'react-bootstrap',
-      'react-highlight',
       'react-router',
       'react-router-bootstrap',
+      'highlight.js'
     ],
     lib: 'lib'
   },

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Navbar, Nav, NavDropdown, MenuItem, NavItem} from 'react-bootstrap';
+import {Navbar, NavBrand, Nav, NavDropdown, MenuItem, NavItem} from 'react-bootstrap';
 
 import Section from './Section';
 import Highlight from './Highlight';
@@ -11,10 +11,10 @@ class DoubleNavbar extends React.Component {
         <h3>Double Navbar</h3>
         <p className="lead">The Double Navbar is meant for desktop and allows you to have two rows of menu options.</p>
         <div>
-          <Navbar fluid className="bootcards-navbar-double"
-            brand={<a title="Bootcards Starter" href="/">Bootcards Starter</a>}
-            toggleNavKey={0}
-          >
+          <Navbar fluid className="bootcards-navbar-double" toggleNavKey={0}>
+            <NavBrand>
+              <a title="Bootcards Starter" href="/">Bootcards Starter</a>
+            </NavBrand>
             <Nav right eventKey={0} className="bootcards-nav-secondary">
               <NavDropdown eventKey={1} id="doublenavbar-languages"
                 title={[
@@ -55,7 +55,7 @@ class DoubleNavbar extends React.Component {
         </div>
         <p>Set <code>class="has-bootcards-navbar-double"</code> on the body element to deal with the increased height of the navbar.</p>
         <Highlight>
-          {'<Navbar fluid className="bootcards-navbar-double" brand={<a title="Bootcards Starter" href="/">Bootcards Starter</a>} toggleNavKey={0}>\n  <Nav right eventKey={0} className="bootcards-nav-secondary">\n    <NavDropdown eventKey={1} id="doublenavbar-languages" title={[<i key="icon" className="fa fa-globe" />, <span key="title"> Languages</span>]}>\n      <MenuItem eventKey="1">Deutsch</MenuItem>\n      <MenuItem eventKey="2">English</MenuItem>\n      <MenuItem eventKey="3">Espanol</MenuItem>\n    </NavDropdown>\n    <NavItem eventKey={2} href="#">\n      <i className="fa fa-fw fa-lock" />\n      <span> Login</span>\n    </NavItem>\n  </Nav>\n  <Nav right eventKey={3} className="bootcards-nav-primary">\n    <NavDropdown eventKey={4} id="doublenavbar-home" title={[<i key="icon" className="fa fa-fw fa-dashboard" />, <span key="title"> Home</span>]}>\n      <MenuItem eventKey="1" href="#"><i className="fa fa-fw fa-envelope-o" /> Action</MenuItem>\n      <MenuItem eventKey="2" href="#"><i className="fa fa-fw fa-film" /> Another action</MenuItem>\n      <MenuItem eventKey="3" href="#"><i className="fa fa-fw fa-file-o" /> Something else here</MenuItem>\n      <MenuItem divider />\n      <MenuItem eventKey="4" href="#"><i className="fa fa-fw fa-bar-chart-o" /> Separated link</MenuItem>\n    </NavDropdown>\n    <NavItem eventKey={5} href="#">\n      <i className="fa fa-fw fa-briefcase" />\n      <span> Portfolio</span>\n    </NavItem>\n    <NavItem eventKey={6} href="#">\n      <i className="fa fa-fw fa-bullhorn" />\n      <span> Blog</span>\n    </NavItem>\n  </Nav>\n</Navbar>'}
+          {'<Navbar fluid className="bootcards-navbar-double" toggleNavKey={0}>\n  <NabBrand>\n    <a title="Bootcards Starter" href="/">Bootcards Starter</a>\n  </NavBrand>\n  <Nav right eventKey={0} className="bootcards-nav-secondary">\n    <NavDropdown eventKey={1} id="doublenavbar-languages" title={[<i key="icon" className="fa fa-globe" />, <span key="title"> Languages</span>]}>\n      <MenuItem eventKey="1">Deutsch</MenuItem>\n      <MenuItem eventKey="2">English</MenuItem>\n      <MenuItem eventKey="3">Espanol</MenuItem>\n    </NavDropdown>\n    <NavItem eventKey={2} href="#">\n      <i className="fa fa-fw fa-lock" />\n      <span> Login</span>\n    </NavItem>\n  </Nav>\n  <Nav right eventKey={3} className="bootcards-nav-primary">\n    <NavDropdown eventKey={4} id="doublenavbar-home" title={[<i key="icon" className="fa fa-fw fa-dashboard" />, <span key="title"> Home</span>]}>\n      <MenuItem eventKey="1" href="#"><i className="fa fa-fw fa-envelope-o" /> Action</MenuItem>\n      <MenuItem eventKey="2" href="#"><i className="fa fa-fw fa-film" /> Another action</MenuItem>\n      <MenuItem eventKey="3" href="#"><i className="fa fa-fw fa-file-o" /> Something else here</MenuItem>\n      <MenuItem divider />\n      <MenuItem eventKey="4" href="#"><i className="fa fa-fw fa-bar-chart-o" /> Separated link</MenuItem>\n    </NavDropdown>\n    <NavItem eventKey={5} href="#">\n      <i className="fa fa-fw fa-briefcase" />\n      <span> Portfolio</span>\n    </NavItem>\n    <NavItem eventKey={6} href="#">\n      <i className="fa fa-fw fa-bullhorn" />\n      <span> Blog</span>\n    </NavItem>\n  </Nav>\n</Navbar>'}
         </Highlight>
       </Section>
     );
