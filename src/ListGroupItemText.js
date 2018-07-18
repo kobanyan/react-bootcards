@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import classNames from 'classnames';
 
@@ -7,12 +8,7 @@ class ListGroupItemText extends React.Component {
   }
 
   render() {
-    const {
-      componentClass,
-      textClassName,
-      className,
-      ...props
-    } = this.props;
+    const { componentClass, textClassName, className, ...props } = this.props;
     const Component = componentClass;
     return (
       <Component {...props} className={classNames(className, textClassName)}>
@@ -23,13 +19,15 @@ class ListGroupItemText extends React.Component {
 }
 
 ListGroupItemText.propTypes = {
-  componentClass: React.PropTypes.string,
-  textClassName: React.PropTypes.string,
+  children: PropTypes.node,
+  className: PropTypes.string,
+  componentClass: PropTypes.string,
+  textClassName: PropTypes.string
 };
 
 ListGroupItemText.defaultProps = {
   componentClass: 'p',
-  textClassName: 'list-group-item-text',
+  textClassName: 'list-group-item-text'
 };
 
 export default ListGroupItemText;

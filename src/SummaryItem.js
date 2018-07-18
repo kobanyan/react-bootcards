@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import classNames from 'classnames';
 
@@ -7,12 +8,7 @@ class SummaryItem extends React.Component {
   }
 
   render() {
-    const {
-      componentClass,
-      itemClassName,
-      className,
-      ...props
-    } = this.props;
+    const { componentClass, itemClassName, className, ...props } = this.props;
     const Component = componentClass;
     return (
       <Component {...props} className={classNames(className, itemClassName)}>
@@ -23,13 +19,15 @@ class SummaryItem extends React.Component {
 }
 
 SummaryItem.propTypes = {
-  componentClass: React.PropTypes.string,
-  itemClassName: React.PropTypes.string,
+  children: PropTypes.node,
+  className: PropTypes.string,
+  componentClass: PropTypes.string,
+  itemClassName: PropTypes.string
 };
 
 SummaryItem.defaultProps = {
   componentClass: 'a',
-  itemClassName: 'bootcards-summary-item',
+  itemClassName: 'bootcards-summary-item'
 };
 
 export default SummaryItem;

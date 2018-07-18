@@ -1,0 +1,4 @@
+{
+  "ignore": ["node-modules/**", "src/index.umd.js"],
+  "presets": [ "env", "stage-0", "react"]
+}

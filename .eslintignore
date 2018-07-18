@@ -1,5 +1,6 @@
-.publish/*
-dist/*
-example/dist/*
 lib/*
+dist/*
+coverage/*
+example/dist/*
 node_modules/*
+bower_components/*
