@@ -1,12 +1,7 @@
-(function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('prop-types'), require('react'), require('classnames'), require('react-bootstrap')) :
-	typeof define === 'function' && define.amd ? define(['exports', 'prop-types', 'react', 'classnames', 'react-bootstrap'], factory) :
-	(factory((global['react-bootcards'] = {}),global.PropTypes,global.React,global.classNames,global.ReactBootstrap));
-}(this, (function (exports,PropTypes,React,classNames,reactBootstrap) { 'use strict';
-
-PropTypes = PropTypes && PropTypes.hasOwnProperty('default') ? PropTypes['default'] : PropTypes;
-React = React && React.hasOwnProperty('default') ? React['default'] : React;
-classNames = classNames && classNames.hasOwnProperty('default') ? classNames['default'] : classNames;
+import PropTypes from 'prop-types';
+import React from 'react';
+import classNames from 'classnames';
+import { Col, Panel } from 'react-bootstrap';
 
 var asyncGenerator = function () {
   function AwaitValue(value) {
@@ -272,7 +267,7 @@ var Cards = function (_React$Component) {
           props = objectWithoutProperties(_props, ['cardsClassName', 'className']);
 
       return React.createElement(
-        reactBootstrap.Col,
+        Col,
         _extends({}, props, { className: classNames(className, cardsClassName) }),
         this.props.children
       );
@@ -308,7 +303,7 @@ var List = function (_React$Component) {
           props = objectWithoutProperties(_props, ['listClassName', 'className']);
 
       return React.createElement(
-        reactBootstrap.Col,
+        Col,
         _extends({}, props, { className: classNames(className, listClassName) }),
         this.props.children
       );
@@ -424,7 +419,7 @@ var Card = function (_React$Component) {
 
       var cardClassName = cardStyle === 'default' ? null : 'bootcards-' + cardStyle;
       return React.createElement(
-        reactBootstrap.Panel,
+        Panel,
         _extends({}, props, { className: classNames(props.className, cardClassName) }),
         this.props.children
       );
@@ -575,7 +570,7 @@ var CardBody = function (_React$Component) {
     key: 'render',
     value: function render() {
       return React.createElement(
-        reactBootstrap.Panel.Body,
+        Panel.Body,
         this.props,
         this.props.children
       );
@@ -668,19 +663,4 @@ ChartCanvas.defaultProps = {
   canvasClassName: 'bootcards-chart-canvas'
 };
 
-exports.Container = Container;
-exports.Cards = Cards;
-exports.List = List;
-exports.ListGroupItemHeader = ListGroupItemHeader;
-exports.ListGroupItemText = ListGroupItemText;
-exports.Card = Card;
-exports.CardHeader = CardHeader;
-exports.CardTitle = CardTitle;
-exports.CardFooter = CardFooter;
-exports.CardBody = CardBody;
-exports.SummaryItem = SummaryItem;
-exports.ChartCanvas = ChartCanvas;
-
-Object.defineProperty(exports, '__esModule', { value: true });
-
-})));
+export { Container, Cards, List, ListGroupItemHeader, ListGroupItemText, Card, CardHeader, CardTitle, CardFooter, CardBody, SummaryItem, ChartCanvas };

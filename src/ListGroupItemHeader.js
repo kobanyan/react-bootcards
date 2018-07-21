@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import classNames from 'classnames';
 
@@ -7,12 +8,7 @@ class ListGroupItemHeader extends React.Component {
   }
 
   render() {
-    const {
-      componentClass,
-      headerClassName,
-      className,
-      ...props
-    } = this.props;
+    const { componentClass, headerClassName, className, ...props } = this.props;
     const Component = componentClass;
     return (
       <Component {...props} className={classNames(className, headerClassName)}>
@@ -23,13 +19,15 @@ class ListGroupItemHeader extends React.Component {
 }
 
 ListGroupItemHeader.propTypes = {
-  componentClass: React.PropTypes.string,
-  headerClassName: React.PropTypes.string,
+  children: PropTypes.node,
+  className: PropTypes.string,
+  componentClass: PropTypes.string,
+  headerClassName: PropTypes.string
 };
 
 ListGroupItemHeader.defaultProps = {
   componentClass: 'h4',
-  headerClassName: 'list-group-item-heading',
+  headerClassName: 'list-group-item-heading'
 };
 
 export default ListGroupItemHeader;

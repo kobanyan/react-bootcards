@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import classNames from 'classnames';
 
@@ -7,12 +8,7 @@ class ChartCanvas extends React.Component {
   }
 
   render() {
-    const {
-      componentClass,
-      canvasClassName,
-      className,
-      ...props
-    } = this.props;
+    const { componentClass, canvasClassName, className, ...props } = this.props;
     const Component = componentClass;
     return (
       <Component {...props} className={classNames(className, canvasClassName)}>
@@ -23,14 +19,15 @@ class ChartCanvas extends React.Component {
 }
 
 ChartCanvas.propTypes = {
-  componentClass: React.PropTypes.string,
-  canvasClassName: React.PropTypes.string,
+  canvasClassName: PropTypes.string,
+  children: PropTypes.node,
+  className: PropTypes.string,
+  componentClass: PropTypes.string
 };
 
 ChartCanvas.defaultProps = {
   componentClass: 'div',
-  canvasClassName: 'bootcards-chart-canvas',
-  fill: true,
+  canvasClassName: 'bootcards-chart-canvas'
 };
 
 export default ChartCanvas;

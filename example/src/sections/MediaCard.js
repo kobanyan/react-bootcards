@@ -1,6 +1,12 @@
 import React from 'react';
-import {ButtonGroup, Button} from 'react-bootstrap';
-import {Card, CardHeader, CardTitle, CardFooter} from 'react-bootcards';
+import { ButtonGroup, Button } from 'react-bootstrap';
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardBody,
+  CardFooter
+} from 'react-bootcards';
 
 import Section from './Section';
 import Highlight from './Highlight';
@@ -17,8 +23,13 @@ class MediaCard extends React.Component {
             <CardHeader>
               <CardTitle>Media Card Heading</CardTitle>
             </CardHeader>
-            Media card description lorem ipsum dolor est compendium
-            <img fill src="http://www.teamstudio.com/Portals/218295/images/istock_000001242290small.jpg" className="img-responsive" />
+            <CardBody>
+              Media card description lorem ipsum dolor est compendium
+            </CardBody>
+            <img
+              src="http://www.teamstudio.com/Portals/218295/images/istock_000001242290small.jpg"
+              className="img-responsive"
+            />
             <CardFooter>
               <ButtonGroup justified>
                 <ButtonGroup>
@@ -44,7 +55,9 @@ class MediaCard extends React.Component {
           </Card>
         </Example>
         <Highlight>
-          {'<Card cardStyle="media">\n  <CardHeader>\n    <CardTitle>Media Card Heading</CardTitle>\n  </CardHeader>\n  Media card description lorem ipsum dolor est compendium\n  <img fill src="http://www.teamstudio.com/Portals/218295/images/istock_000001242290small.jpg" className="img-responsive" />\n  <CardFooter>\n    <ButtonGroup justified>\n      <ButtonGroup>\n        <Button>\n          <i className="fa fa-arrow-down" />\n          Download\n        </Button>\n      </ButtonGroup>\n      <ButtonGroup>\n        <Button>\n          <i className="fa fa-star" />\n          Favorite\n        </Button>\n      </ButtonGroup>\n      <ButtonGroup>\n        <Button>\n          <i className="fa fa-envelope" />\n          Email\n        </Button>\n      </ButtonGroup>\n    </ButtonGroup>\n  </CardFooter>\n</Card>'}
+          {
+            '<Card cardStyle="media">\n  <CardHeader>\n    <CardTitle>Media Card Heading</CardTitle>\n  </CardHeader>\n  <CardBody>\n    Media card description lorem ipsum dolor est compendium\n  </CardBody>\n  <img\n    src="http://www.teamstudio.com/Portals/218295/images/istock_000001242290small.jpg"\n    className="img-responsive"\n  />\n  <CardFooter>\n    <ButtonGroup justified>\n      <ButtonGroup>\n        <Button>\n          <i className="fa fa-arrow-down" />\n          Download\n        </Button>\n      </ButtonGroup>\n      <ButtonGroup>\n        <Button>\n          <i className="fa fa-star" />\n          Favorite\n        </Button>\n      </ButtonGroup>\n      <ButtonGroup>\n        <Button>\n          <i className="fa fa-envelope" />\n          Email\n        </Button>\n      </ButtonGroup>\n    </ButtonGroup>\n  </CardFooter>\n</Card>\n'
+          }
         </Highlight>
       </Section>
     );

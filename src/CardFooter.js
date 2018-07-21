@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import classNames from 'classnames';
 
@@ -7,12 +8,7 @@ class CardFooter extends React.Component {
   }
 
   render() {
-    const {
-      componentClass,
-      footerClassName,
-      className,
-      ...props
-    } = this.props;
+    const { componentClass, footerClassName, className, ...props } = this.props;
     const Component = componentClass;
     return (
       <Component {...props} className={classNames(className, footerClassName)}>
@@ -23,14 +19,15 @@ class CardFooter extends React.Component {
 }
 
 CardFooter.propTypes = {
-  componentClass: React.PropTypes.string,
-  footerClassName: React.PropTypes.string,
+  children: PropTypes.node,
+  className: PropTypes.string,
+  componentClass: PropTypes.string,
+  footerClassName: PropTypes.string
 };
 
 CardFooter.defaultProps = {
   componentClass: 'div',
-  footerClassName: 'panel-footer',
-  fill: true,
+  footerClassName: 'panel-footer'
 };
 
 export default CardFooter;

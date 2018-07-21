@@ -14,8 +14,8 @@ Live demo: [kobanyan.github.io/react-bootcards](http://kobanyan.github.io/react-
 To build the examples locally, run:
 
 ```
-npm install
-npm start
+yarn install
+yarn start
 ```
 
 Then open [`localhost:8000`](http://localhost:8000) in a browser.
@@ -31,19 +31,12 @@ You can also use the standalone build by including `dist/react-bootcards.js` in 
 npm install react-bootcards --save
 ```
 
+or
 
-## Usage
+```
+yarn add react-bootcards
+```
 
-### Properties
-
-### Notes
-
-
-## Development (`src`, `lib` and the build process)
-
-**NOTE:** The source code for the component is in `src`. A transpiled CommonJS version (generated with Babel) is available in `lib` for use with node.js, browserify and webpack. A UMD bundle is also built to `dist`, which can be included without the need for any build system.
-
-To build, watch and serve the examples (which will also watch the component source), run `npm start`. If you just want to watch changes to `src` and rebuild `lib`, run `npm run watch` (this is useful if you are working with `npm link`).
 
 ## License
 

@@ -1,6 +1,7 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import classNames from 'classnames';
-import {Col} from 'react-bootstrap';
+import { Col } from 'react-bootstrap';
 
 class Cards extends React.Component {
   constructor(props) {
@@ -8,11 +9,7 @@ class Cards extends React.Component {
   }
 
   render() {
-    const {
-      cardsClassName,
-      className,
-      ...props
-    } = this.props;
+    const { cardsClassName, className, ...props } = this.props;
     return (
       <Col {...props} className={classNames(className, cardsClassName)}>
         {this.props.children}
@@ -22,11 +19,13 @@ class Cards extends React.Component {
 }
 
 Cards.propTypes = {
-  cardsClassName: React.PropTypes.string,
+  cardsClassName: PropTypes.string,
+  children: PropTypes.node,
+  className: PropTypes.string
 };
 
 Cards.defaultProps = {
-  cardsClassName: 'bootcards-cards',
+  cardsClassName: 'bootcards-cards'
 };
 
 export default Cards;

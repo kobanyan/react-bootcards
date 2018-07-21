@@ -1,6 +1,7 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import classNames from 'classnames';
-import {Col} from 'react-bootstrap';
+import { Col } from 'react-bootstrap';
 
 class List extends React.Component {
   constructor(props) {
@@ -8,11 +9,7 @@ class List extends React.Component {
   }
 
   render() {
-    const {
-      listClassName,
-      className,
-      ...props
-    } = this.props;
+    const { listClassName, className, ...props } = this.props;
     return (
       <Col {...props} className={classNames(className, listClassName)}>
         {this.props.children}
@@ -22,11 +19,13 @@ class List extends React.Component {
 }
 
 List.propTypes = {
-  listClassName: React.PropTypes.string,
+  children: PropTypes.node,
+  className: PropTypes.string,
+  listClassName: PropTypes.string
 };
 
 List.defaultProps = {
-  listClassName: 'bootcards-list',
+  listClassName: 'bootcards-list'
 };
 
 export default List;

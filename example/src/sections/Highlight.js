@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import classNames from 'classnames';
@@ -23,12 +24,11 @@ class Highlight extends React.Component {
   }
 
   render() {
+    const { className, highlightClassName, ...props } = this.props;
     return (
-      <div {...this.props} className={classNames(this.props.className, 'highlight')}>
+      <div {...props} className={classNames(className, 'highlight')}>
         <pre>
-          <code className={this.props.highlightClassName}>
-            {this.props.children}
-          </code>
+          <code className={highlightClassName}>{this.props.children}</code>
         </pre>
       </div>
     );
@@ -36,11 +36,13 @@ class Highlight extends React.Component {
 }
 
 Highlight.propTypes = {
-  highlightClassName: React.PropTypes.string,
+  children: PropTypes.node,
+  className: PropTypes.string,
+  highlightClassName: PropTypes.string
 };
 
 Highlight.defaultProps = {
-  highlightClassName: 'xml',
+  highlightClassName: 'xml'
 };
 
 export default Highlight;

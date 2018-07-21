@@ -1,6 +1,7 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import classNames from 'classnames';
-import {Panel} from 'react-bootstrap';
+import { Panel } from 'react-bootstrap';
 
 class Card extends React.Component {
   constructor(props) {
@@ -8,25 +9,32 @@ class Card extends React.Component {
   }
 
   render() {
+    const { cardStyle, ...props } = this.props;
     const cardClassName =
-      this.props.cardStyle === 'default'
-        ? null
-        : 'bootcards-' + this.props.cardStyle;
+      cardStyle === 'default' ? null : `bootcards-${cardStyle}`;
     return (
-      <Panel {...this.props} className={classNames(this.props.className, cardClassName)}>
+      <Panel {...props} className={classNames(props.className, cardClassName)}>
         {this.props.children}
       </Panel>
     );
   }
-
 }
 
 Card.propTypes = {
-  cardStyle: React.PropTypes.oneOf(['default', 'chart', 'summary', 'media', 'file', 'richtext']),
+  cardStyle: PropTypes.oneOf([
+    'default',
+    'chart',
+    'summary',
+    'media',
+    'file',
+    'richtext'
+  ]),
+  children: PropTypes.node,
+  className: PropTypes.string
 };
 
 Card.defaultProps = {
-  cardStyle: 'default',
+  cardStyle: 'default'
 };
 
 export default Card;
