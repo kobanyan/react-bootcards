@@ -53,7 +53,6 @@ class FormCard extends React.Component {
                   <Col xs={9}>
                     <FormControl
                       type="text"
-                      className="col-xs-9"
                       defaultValue="John Smith"
                     />
                   </Col>
@@ -65,7 +64,6 @@ class FormCard extends React.Component {
                   <Col xs={9}>
                     <FormControl
                       componentClass="select"
-                      className="col-xs-9"
                       defaultValue="Developer"
                     >
                       <option>Designer</option>
@@ -81,7 +79,6 @@ class FormCard extends React.Component {
                   <Col xs={9}>
                     <FormControl
                       componentClass="textarea"
-                      className="col-xs-9"
                       defaultValue="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam mauris tellus, vehicula ut tellus id, suscipit dapibus tortor. Integer viverra turpis ac fringilla hendrerit. Sed faucibus posuere felis et pellentesque. Cras varius tortor vitae molestie tempor. Proin ut viverra elit, ac gravida tortor."
                       rows="6"
                     />
