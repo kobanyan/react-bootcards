@@ -13,7 +13,6 @@ module.exports = {
     filename: '[name].js',
     publicPath: '/'
   },
-  devtool: 'cheap-eval-source-map',
   devServer: {
     contentBase: path.resolve(__dirname, 'example/src'),
     port: 8000
